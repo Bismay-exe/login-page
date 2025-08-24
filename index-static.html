@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login — Static Illustration</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <img class="illustration" src="assets/cartoon-person.svg" alt="Cartoon character illustration"/>
+    <div class="card">
+      <h2>Welcome back</h2>
+      <div class="field">
+        <span class="icon">📧</span>
+        <input type="email" placeholder="Email" required />
+      </div>
+      <div class="field">
+        <span class="icon">🔒</span>
+        <input id="pwd" type="password" placeholder="Password" required />
+        <span id="toggle" class="toggle">👁️</span>
+      </div>
+      <button class="button">Login</button>
+      <div class="meta">Forgot password? <a href="#">Reset</a></div>
+      <div class="meta">No account? <a href="#">Create one</a></div>
+    </div>
+  </div>
+  <script>
+    // simple show/hide password
+    const t = document.getElementById('toggle');
+    const p = document.getElementById('pwd');
+    t.addEventListener('click', ()=>{
+      p.type = p.type === 'password' ? 'text' : 'password';
+    });
+  </script>
+</body>
+</html>

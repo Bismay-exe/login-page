@@ -1,0 +1,108 @@
+
+:root{
+  --card-bg:#f9f9fb;
+  --card-shadow: 0 10px 30px rgba(0,0,0,.08);
+  --accent:#2962ff;
+  --accent-hover:#1e40ff;
+  --text:#1f2937;
+  --muted:#6b7280;
+  --radius:20px;
+}
+*{box-sizing:border-box}
+html,body{
+  height:100%;
+}
+body{
+  margin:0;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Apple Color Emoji","Segoe UI Emoji", "Segoe UI Symbol";
+  background:#fff;
+  color:var(--text);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:24px;
+}
+.container{
+  display:flex;
+  align-items:center;
+  gap:48px;
+  max-width:1100px;
+  width:100%;
+  justify-content:center;
+}
+.card{
+  width:340px;
+  background:var(--card-bg);
+  border-radius:var(--radius);
+  padding:32px;
+  box-shadow:var(--card-shadow);
+}
+.card h2{
+  margin:0 0 16px;
+  font-size:24px;
+}
+.field{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  background:#fff;
+  border-radius:12px;
+  padding:12px 14px;
+  box-shadow: inset 0 2px 6px rgba(0,0,0,.06);
+  margin:10px 0;
+}
+.field input{
+  border:none;
+  outline:none;
+  flex:1;
+  font-size:14px;
+  background:transparent;
+}
+.button{
+  width:100%;
+  border:none;
+  cursor:pointer;
+  border-radius:12px;
+  padding:12px 16px;
+  background:var(--accent);
+  color:#fff;
+  font-weight:600;
+  margin-top:12px;
+  transition:.2s ease;
+}
+.button:hover{ background:var(--accent-hover); }
+.meta{
+  margin-top:12px;
+  font-size:13px;
+  color:var(--muted);
+  text-align:center;
+}
+.meta a{
+  color:var(--accent);
+  text-decoration:none;
+}
+/* static illustration box */
+.illustration{
+  width:360px;
+  max-width:40vw;
+}
+/* responsive */
+@media (max-width:900px){
+  .container{ flex-direction:column; gap:24px; }
+  .illustration, canvas{ width:320px; height:380px; }
+}
+/* Canvas base size for 3D version */
+.three-wrap{
+  width:360px;
+  height:440px;
+  border-radius:24px;
+  box-shadow:var(--card-shadow);
+  background: radial-gradient(120% 120% at 20% 20%, #eef2ff 0%, #ffffff 60%);
+  overflow:hidden;
+}
+/* little input adornments */
+.icon{opacity:.5}
+.toggle{
+  cursor:pointer;
+  user-select:none;
+}
